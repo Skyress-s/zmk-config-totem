@@ -224,10 +224,19 @@
 
         Symbols {
             bindings = <
-           &kp TILDE      &kp DLLR      &kp LBRC      &kp RBRC      &kp AT         &kp PLUS       &kp LS(STAR)  &kp PIPE      &kp LS(QMARK)  &kp LS(COLON)
-           &kp LS(COLON)  &kp LS(SEMI)  &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(DQT)    &kp MINUS      &kp LS(AMPS)  &kp LS(EXCL)  &kp LS(PRCNT)  &trans
-&kp LCTRL  &kp GRAVE      &kp APOS      &kp LBKT      &kp RBKT      &kp SQT        &kp LS(UNDER)  &kp LT        &kp LS(GT)    &kp LS(GT)     &kp FSLH       &trans
-                                        &trans        &trans        &trans         &trans         &trans        &trans
+           &kp TILDE  &kp DLLR       &kp LBRC              &kp RBRC               &kp AT               &kp PLUS        &kp ASTRK  &kp PIPE       &kp QUESTION      &none
+           &kp COLON  &kp SEMICOLON  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES    &kp MINUS       &kp EQUAL  &kp AMPERSAND  &kp EXCLAMATION   &trans
+&kp LCTRL  &kp GRAVE  &kp APOS       &kp LBKT              &kp RBKT               &kp SQT              &kp UNDERSCORE  &kp POUND  &kp LESS_THAN  &kp GREATER_THAN  &kp FSLH  &trans
+                                     &trans                &trans                 &trans               &trans          &trans     &trans
+            >;
+        };
+
+        Brightness_System {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans         &trans          &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN  &kp LEFT_ARROW  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans          &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans         &trans          &trans
             >;
         };
     };
