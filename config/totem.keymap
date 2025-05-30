@@ -233,10 +233,10 @@
 
         Brightness_System {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans         &trans          &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &kp PAGE_DOWN  &kp LEFT_ARROW  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans          &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans         &trans          &trans
+        &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp A     &trans   &trans          &trans          &trans        &trans
+        &trans  &trans      &kp K_STOP         &kp K_PLAY_PAUSE  &kp A     &kp ESC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
+&trans  &trans  &trans      &kp K_PREV         &kp K_NEXT        &trans    &trans   &kp INSERT      &trans          &trans        &trans     &trans
+                            &trans             &trans            &trans    &trans   &trans          &trans
             >;
         };
     };
