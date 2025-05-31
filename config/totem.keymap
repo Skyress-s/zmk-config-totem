@@ -10,7 +10,6 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-
 #include "keys_nb.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -86,10 +85,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J            &kp L        &kp U        &kp Y       &kp SEMI
-        &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M            &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&tog 5  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K            &kp H        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
-                                &kp ESCAPE   &lt 1 SPACE  &lt 2 TAB    &lt 3 BACKSPACE  &lt 4 ENTER  &kp BSPC
+        &kp Q       &kp W       &kp F                    &kp P        &kp B        &kp J            &kp L        &kp U        &kp Y       &kp SEMI
+        &mt LGUI A  &mt LALT R  &mt LCTRL S              &mt LSHFT T  &kp G        &kp M            &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
+&tog 5  &kp Z       &kp X       &kp C                    &kp D        &kp V        &kp K            &kp H        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
+                                &kp NB_ESCAPE_CHARACTER  &lt 1 SPACE  &lt 2 TAB    &lt 3 BACKSPACE  &lt 4 ENTER  &kp BSPC
             >;
         };
 
@@ -130,28 +129,28 @@
 
         Symbols {
             bindings = <
-           &kp TILDE  &kp DLLR       &kp LBRC              &kp RBRC               &kp AT               &kp PLUS        &kp ASTRK     &kp PIPE          &kp QUESTION      &trans
-           &kp COLON  &kp SEMICOLON  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES    &kp MINUS       &kp NB_EQUAL  &kp NB_AMPERSAND  &kp EXCLAMATION   &kp PERCENT
-&kp LCTRL  &kp GRAVE  &kp APOS       &kp LBKT              &kp RBKT               &kp SQT              &kp UNDERSCORE  &kp POUND     &kp LESS_THAN     &kp GREATER_THAN  &kp FSLH     &trans
-                                     &trans                &trans                 &trans               &trans          &trans        &trans
+           &kp NB_TILDE  &kp NB_DOLLAR      &kp NB_LEFT_BRACE        &kp NB_RIGHT_BRACE        &kp NB_AT               &kp NB_PLUS        &kp NB_ASTERISK  &kp NB_PIPE       &kp NB_QUESTION      &trans
+           &kp NB_COLON  &kp NB_SEMICOLON   &kp NB_LEFT_PARENTHESIS  &kp NB_RIGHT_PARENTHESIS  &kp NB_DOUBLE_QUOTES    &kp NB_MINUS       &kp NB_EQUAL     &kp NB_AMPERSAND  &kp NB_EXCLAMATION   &kp NB_PERCENT
+&kp LCTRL  &kp NB_GRAVE  &kp NB_APOSTROPHE  &kp NB_LEFT_BRACKET      &kp NB_RIGHT_BRACKET      &kp NB_SQT              &kp NB_UNDERSCORE  &kp NB_HASH      &kp NB_LESS_THAN  &kp NB_GREATER_THAN  &kp NB_SLASH    &trans
+                                            &trans                   &trans                    &trans                  &trans             &trans           &trans
             >;
         };
 
         Brightness_System {
             bindings = <
-        &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp A     &trans   &trans          &trans          &trans        &trans
-        &trans  &trans      &kp K_STOP         &kp K_PLAY_PAUSE  &kp A     &kp ESC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
-&trans  &trans  &trans      &kp K_PREV         &kp K_NEXT        &trans    &trans   &kp INSERT      &trans          &trans        &trans     &trans
-                            &trans             &trans            &trans    &trans   &trans          &trans
+        &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp A     &trans                   &trans          &trans          &trans        &trans
+        &trans  &trans      &kp K_STOP         &kp K_PLAY_PAUSE  &kp A     &kp NB_ESCAPE_CHARACTER  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
+&trans  &trans  &trans      &kp K_PREV         &kp K_NEXT        &trans    &trans                   &kp INSERT      &trans          &trans        &trans     &trans
+                            &trans             &trans            &trans    &trans                   &trans          &trans
             >;
         };
 
         Gaming {
             bindings = <
-        &kp M      &kp Q  &kp X   &kp E      &kp R           &trans  &trans  &trans  &trans  &trans
-        &kp LSHFT  &kp A  &kp W   &kp D      &kp F           &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp S   &kp C      &kp V           &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans
+        &kp M      &kp Q  &kp X   &kp E         &kp R           &trans  &trans  &trans  &trans  &trans
+        &kp LSHFT  &kp A  &kp W   &kp D         &kp F           &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp S   &kp C         &kp V           &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &kp NB_SPACE  &kp LEFT_ALT    &trans  &trans  &trans
             >;
         };
     };
