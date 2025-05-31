@@ -85,11 +85,22 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J          &kp L        &kp U        &kp Y       &kp SEMI
-         &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M          &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp TAB  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K          &kp H        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
-                                 &kp SPACE    &lt 1 SPACE  &lt 3 TAB    &kp BACKSPACE  &lt 3 ENTER  &kp BSPC
+            &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J            &kp L        &kp U        &kp Y       &kp SEMI
+            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M            &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
+&kp ESCAPE  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K            &kp H        &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
+                                    &kp SPACE    &lt 2 SPACE  &lt 3 TAB    &lt 7 BACKSPACE  &lt 8 ENTER  &kp BSPC
             >;
+        };
+
+        FKeys {
+            bindings = <
+        &trans  &kp F12  &kp F7  &kp F8  &kp F9    &trans  &trans  &trans  &trans  &trans
+        &trans  &kp F11  &kp F4  &kp F5  &kp F6    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3    &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "L_FKEY";
         };
 
         Num {
@@ -114,17 +125,6 @@
 &trans  &kp DEL     &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
                                 &trans        &trans        &trans          &mo 4     &kp KP_N0  &trans
             >;
-        };
-
-        FKeys {
-            bindings = <
-        &trans  &kp F12  &kp F7  &kp F8  &kp F9    &trans  &trans  &trans  &trans  &trans
-        &trans  &kp F11  &kp F4  &kp F5  &kp F6    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3    &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "L_FKEY";
         };
 
         sim_layer {
@@ -238,6 +238,15 @@
         &trans  &trans      &kp K_STOP         &kp K_PLAY_PAUSE  &kp A     &kp ESC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
 &trans  &trans  &trans      &kp K_PREV         &kp K_NEXT        &trans    &trans   &kp INSERT      &trans          &trans        &trans     &trans
                             &trans             &trans            &trans    &trans   &trans          &trans
+            >;
+        };
+
+        Gaming {
+            bindings = <
+        &kp M      &kp Q  &kp X   &kp E      &kp R           &trans  &trans  &trans  &trans  &trans
+        &kp LSHFT  &kp A  &kp W   &kp D      &kp F           &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp S   &kp C      &kp V           &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans
             >;
         };
     };
