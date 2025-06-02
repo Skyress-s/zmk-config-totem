@@ -39,6 +39,50 @@
             bindings = <&kp ESC>;
             layers = <0>;
         };
+
+        BraceOpen {
+            bindings = <&kp NB_LEFT_BRACE>;
+            key-positions = <1 2>;
+            layers = <0>;
+        };
+
+        BraceClose {
+            bindings = <&kp NB_RIGHT_BRACE>;
+            key-positions = <2 3>;
+            layers = <0>;
+        };
+
+        BracketOpen {
+            bindings = <&kp NB_LEFT_BRACKET>;
+            key-positions = <1 2>;
+            layers = <2>;
+        };
+
+        BracketClose {
+            bindings = <&kp NB_RIGHT_BRACKET>;
+            key-positions = <3 2>;
+            layers = <2>;
+        };
+
+        ParentOpen {
+            bindings = <&kp NB_LEFT_PARENTHESIS>;
+            key-positions = <11 12>;
+        };
+
+        ParentClose {
+            bindings = <&kp NB_RIGHT_PARENTHESIS>;
+            key-positions = <12 13>;
+        };
+
+        CrocOpen {
+            bindings = <&kp NB_LESS_THAN>;
+            key-positions = <12 11>;
+        };
+
+        CrocClose {
+            bindings = <&kp NB_GREATER_THAN>;
+            key-positions = <13 12>;
+        };
     };
 
     macros {
