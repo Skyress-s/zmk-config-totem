@@ -67,21 +67,47 @@
         ParentOpen {
             bindings = <&kp NB_LEFT_PARENTHESIS>;
             key-positions = <11 12>;
+            layers = <0>;
         };
 
         ParentClose {
             bindings = <&kp NB_RIGHT_PARENTHESIS>;
             key-positions = <12 13>;
+            layers = <0>;
         };
 
         CrocOpen {
             bindings = <&kp NB_LESS_THAN>;
             key-positions = <12 11>;
+            layers = <2>;
         };
 
         CrocClose {
             bindings = <&kp NB_GREATER_THAN>;
             key-positions = <13 12>;
+            layers = <2>;
+        };
+
+        Underscore {
+            bindings = <&kp NB_UNDERSCORE>;
+            key-positions = <14 25>;
+            layers = <0>;
+        };
+
+        Hat {
+            bindings = <&kp NB_CARET>;
+            key-positions = <4 14>;
+            layers = <0>;
+        };
+
+        plus {
+            bindings = <&kp NB_PLUS>;
+            key-positions = <3 13>;
+        };
+
+        minus {
+            bindings = <&kp NB_MINUS>;
+            key-positions = <13 24>;
         };
     };
 
