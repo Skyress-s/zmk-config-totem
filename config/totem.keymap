@@ -55,7 +55,7 @@
             bindings = <&kp NB_RIGHT_BRACE>;
             key-positions = <2 3>;
             layers = <0>;
-            require-prior-idle-ms = <150>;        
+            require-prior-idle-ms = <150>;
         };
 
         BracketOpen {
@@ -175,6 +175,16 @@
             key-positions = <0 20>;
             layers = <0 5>;
             require-prior-idle-ms = <150>;
+        };
+
+        Exclemation {
+            bindings = <&kp NB_EXCLAMATION>;
+            key-positions = <26 27>;
+        };
+
+        Question {
+            bindings = <&kp NB_QUESTION>;
+            key-positions = <27 28>;
         };
     };
 
