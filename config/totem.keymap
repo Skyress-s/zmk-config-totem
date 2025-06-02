@@ -41,12 +41,14 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
             layers = <0>;
+            require-prior-idle-ms = <100>;
         };
 
         BraceOpen {
             bindings = <&kp NB_LEFT_BRACE>;
             key-positions = <1 2>;
             layers = <0>;
+            require-prior-idle-ms = <100>;
         };
 
         BraceClose {
