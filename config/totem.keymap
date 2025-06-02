@@ -126,13 +126,25 @@
 
         Tab {
             bindings = <&kp NB_PIPE>;
-            key-positions = <14 4>;
+            key-positions = <16 17>;
             layers = <0>;
         };
 
         Ampersand {
             bindings = <&kp NB_AMPERSAND>;
-            key-positions = <14 25>;
+            key-positions = <17 18>;
+            layers = <0>;
+        };
+
+        Dollar {
+            bindings = <&kp NB_DOLLAR>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        Percent {
+            bindings = <&kp NB_PERCENT>;
+            key-positions = <7 8>;
             layers = <0>;
         };
     };
