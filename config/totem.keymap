@@ -150,6 +150,11 @@
             key-positions = <7 8>;
             layers = <0>;
         };
+
+        Gaming {
+            bindings = <&gaming 0 5>;
+            key-positions = <0 20>;
+        };
     };
 
     macros {
@@ -166,6 +171,18 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
+        };
+    };
+
+    behaviors {
+        gaming: gaming {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GAMING";
+            #binding-cells = <2>;
+            bindings = <&to>, <&to>;
+
+            tapping-term-ms = <175>;
+            flavor = "balanced";
         };
     };
 
