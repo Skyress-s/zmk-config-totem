@@ -93,13 +93,13 @@
 
         Underscore {
             bindings = <&kp NB_UNDERSCORE>;
-            key-positions = <14 25>;
+            key-positions = <26 27>;
             layers = <2>;
         };
 
         Hat {
             bindings = <&kp NB_CARET>;
-            key-positions = <4 14>;
+            key-positions = <15 16>;
             layers = <2>;
         };
 
@@ -152,8 +152,9 @@
         };
 
         Gaming {
-            bindings = <&gaming 0 5>;
+            bindings = <&gaming 5 0>;
             key-positions = <0 20>;
+            layers = <0 5>;
         };
     };
 
