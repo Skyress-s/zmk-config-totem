@@ -91,13 +91,13 @@
         Underscore {
             bindings = <&kp NB_UNDERSCORE>;
             key-positions = <14 25>;
-            layers = <0>;
+            layers = <2>;
         };
 
         Hat {
             bindings = <&kp NB_CARET>;
             key-positions = <4 14>;
-            layers = <0>;
+            layers = <2>;
         };
 
         plus {
@@ -121,6 +121,18 @@
         Equal {
             bindings = <&kp NB_EQUAL>;
             key-positions = <24 23>;
+            layers = <0>;
+        };
+
+        Tab {
+            bindings = <&kp NB_PIPE>;
+            key-positions = <14 25>;
+            layers = <0>;
+        };
+
+        Ampersand {
+            bindings = <&kp NB_AMPERSAND>;
+            key-positions = <4 14>;
             layers = <0>;
         };
     };
