@@ -103,11 +103,25 @@
         plus {
             bindings = <&kp NB_PLUS>;
             key-positions = <3 13>;
+            layers = <0>;
         };
 
         minus {
             bindings = <&kp NB_MINUS>;
             key-positions = <13 24>;
+            layers = <0>;
+        };
+
+        Star {
+            bindings = <&kp NB_STAR>;
+            key-positions = <23 22>;
+            layers = <0>;
+        };
+
+        Equal {
+            bindings = <&kp NB_EQUAL>;
+            key-positions = <24 23>;
+            layers = <0>;
         };
     };
 
