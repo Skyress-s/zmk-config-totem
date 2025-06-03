@@ -228,6 +228,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mmquote: mmquote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMQUOTE";
+            bindings = <&kp NB_SQT>, <&kp NB_DOUBLE_QUOTES>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -252,7 +261,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q       &kp W       &kp F           &kp P        &kp B        &kp J            &kp L             &kp U               &kp Y           &kp NB_SQT
+                &kp Q       &kp W       &kp F           &kp P        &kp B        &kp J            &kp L             &kp U               &kp Y           &mmquote
                 &mt LGUI A  &mt LALT R  &mt LCTRL S     &mt LSHFT T  &kp G        &kp M            &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt RGUI O
 &kp LEFT_SHIFT  &kp Z       &kp X       &kp C           &kp D        &kp V        &kp K            &kp H             &kp NB_COMMA        &kp NB_DOT      &mmQuestionExplemation  &kp NB_BACKSLASH
                                         &lt 6 LEFT_ALT  &lt 1 SPACE  &lt 2 TAB    &lt 3 BACKSPACE  &lt 4 ENTER       &lt 4 BACKSPACE
