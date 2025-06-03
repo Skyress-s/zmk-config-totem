@@ -172,7 +172,7 @@
 
         Gaming {
             bindings = <&gaming 5 0>;
-            key-positions = <0 20>;
+            key-positions = <0 1>;
             layers = <0 5>;
             require-prior-idle-ms = <150>;
         };
