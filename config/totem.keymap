@@ -190,6 +190,16 @@
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
+
+        FwdSlash {
+            bindings = <&kp NB_SLASH>;
+            key-positions = <15 5>;
+        };
+
+        BwdSlash {
+            bindings = <&kp NB_BACKSLASH>;
+            key-positions = <26 15>;
+        };
     };
 
     macros {
