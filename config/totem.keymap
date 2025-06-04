@@ -234,8 +234,9 @@
         };
 
         MouseLayer {
-            bindings = <&to 7>;
+            bindings = <&tog 7>;
             key-positions = <3 2>;
+            layers = <0>;
         };
     };
 
