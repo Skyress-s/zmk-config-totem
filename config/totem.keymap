@@ -180,11 +180,56 @@
         FwdSlash {
             bindings = <&kp NB_SLASH>;
             key-positions = <17 28>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
         };
 
         BwdSlash {
             bindings = <&kp NB_BACKSLASH>;
             key-positions = <12 23>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Equal {
+            bindings = <&kp NB_HASH>;
+            key-positions = <2 12>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        At {
+            bindings = <&kp NB_AT_SIGN>;
+            key-positions = <1 11>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        Tilde {
+            bindings = <&kp NB_TILDE>;
+            key-positions = <14 25>;
+        };
+
+        Trophy {
+            bindings = <&kp NB_GRAVE>;
+            key-positions = <22 11>;
+        };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <7 6>;
+        };
+
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <8 7>;
         };
     };
 
