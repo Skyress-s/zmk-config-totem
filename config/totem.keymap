@@ -38,7 +38,7 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             bindings = <&kp ESC>;
             layers = <0>;
             require-prior-idle-ms = <150>;
@@ -46,126 +46,126 @@
 
         BraceOpen {
             bindings = <&kp NB_LEFT_BRACE>;
-            key-positions = <1 2>;
+            key-positions = <27 28>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         BraceClose {
             bindings = <&kp NB_RIGHT_BRACE>;
-            key-positions = <2 3>;
+            key-positions = <29 28>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         BracketOpen {
             bindings = <&kp NB_LEFT_BRACKET>;
-            key-positions = <1 2>;
+            key-positions = <27 28>;
             layers = <2>;
             require-prior-idle-ms = <150>;
         };
 
         BracketClose {
             bindings = <&kp NB_RIGHT_BRACKET>;
-            key-positions = <3 2>;
+            key-positions = <28 29>;
             layers = <2>;
             require-prior-idle-ms = <150>;
         };
 
         ParentOpen {
             bindings = <&kp NB_LEFT_PARENTHESIS>;
-            key-positions = <11 12>;
+            key-positions = <16 17>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         ParentClose {
             bindings = <&kp NB_RIGHT_PARENTHESIS>;
-            key-positions = <12 13>;
+            key-positions = <17 18>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         CrocOpen {
             bindings = <&kp NB_LESS_THAN>;
-            key-positions = <12 11>;
+            key-positions = <17 16>;
             layers = <2>;
             require-prior-idle-ms = <150>;
         };
 
         CrocClose {
             bindings = <&kp NB_GREATER_THAN>;
-            key-positions = <13 12>;
+            key-positions = <17 18>;
             layers = <2>;
             require-prior-idle-ms = <150>;
         };
 
         Underscore {
             bindings = <&kp NB_UNDERSCORE>;
-            key-positions = <27 28>;
+            key-positions = <26 15>;
             layers = <2>;
             require-prior-idle-ms = <150>;
         };
 
         Hat {
             bindings = <&kp NB_CARET>;
-            key-positions = <16 17>;
+            key-positions = <15 5>;
             layers = <2>;
             require-prior-idle-ms = <150>;
         };
 
         plus {
             bindings = <&kp NB_PLUS>;
-            key-positions = <3 13>;
+            key-positions = <6 16>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         minus {
             bindings = <&kp NB_MINUS>;
-            key-positions = <13 24>;
+            key-positions = <16 27>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         Star {
             bindings = <&kp NB_STAR>;
-            key-positions = <23 22>;
+            key-positions = <7 17>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         Equal {
             bindings = <&kp NB_EQUAL>;
-            key-positions = <24 23>;
+            key-positions = <24 13>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         Tab {
             bindings = <&kp NB_PIPE>;
-            key-positions = <16 17>;
+            key-positions = <18 29>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         Ampersand {
             bindings = <&kp NB_AMPERSAND>;
-            key-positions = <17 18>;
+            key-positions = <18 8>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         Dollar {
             bindings = <&kp NB_DOLLAR>;
-            key-positions = <6 7>;
+            key-positions = <3 13>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         Percent {
             bindings = <&kp NB_PERCENT>;
-            key-positions = <7 8>;
+            key-positions = <4 14>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
@@ -177,28 +177,14 @@
             require-prior-idle-ms = <150>;
         };
 
-        Exclemation {
-            bindings = <&kp NB_EXCLAMATION>;
-            key-positions = <27 28>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
-        };
-
-        Question {
-            bindings = <&kp NB_QUESTION>;
-            key-positions = <28 29>;
-            layers = <0>;
-            require-prior-idle-ms = <150>;
-        };
-
         FwdSlash {
             bindings = <&kp NB_SLASH>;
-            key-positions = <15 5>;
+            key-positions = <17 28>;
         };
 
         BwdSlash {
             bindings = <&kp NB_BACKSLASH>;
-            key-positions = <26 15>;
+            key-positions = <12 23>;
         };
     };
 
