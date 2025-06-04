@@ -14,6 +14,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -103,14 +104,14 @@
         Underscore {
             bindings = <&kp NB_UNDERSCORE>;
             key-positions = <26 15>;
-            layers = <2>;
+            layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
         Hat {
             bindings = <&kp NB_CARET>;
             key-positions = <15 5>;
-            layers = <2>;
+            layers = <0>;
             require-prior-idle-ms = <150>;
         };
 
@@ -231,6 +232,11 @@
             bindings = <&kp DELETE>;
             key-positions = <8 7>;
         };
+
+        MouseLayer {
+            bindings = <&to 7>;
+            key-positions = <3 2>;
+        };
     };
 
     macros {
@@ -311,7 +317,7 @@
             bindings = <
                 &kp Q               &kp W           &kp F           &kp P        &kp B        &kp J                   &kp L             &kp U               &kp Y           &mmquote
                 &mt LGUI A          &mt LALT R      &mt LCTRL S     &mt LSHFT T  &kp G        &kp M                   &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt RGUI O
-&kp LEFT_SHIFT  &mt Z LEFT_CONTROL  &mt X LEFT_ALT  &kp C           &kp D        &kp V        &kp K                   &kp H             &kp NB_COMMA        &kp NB_DOT      &mmQuestionExplemation  &backspace_layerswitch
+&kp LEFT_SHIFT  &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &kp C           &kp D        &kp V        &kp K                   &kp H             &kp NB_COMMA        &kp NB_DOT      &mmQuestionExplemation  &backspace_layerswitch
                                                     &lt 6 LEFT_ALT  &lt 6 SPACE  &lt 2 TAB    &backspace_layerswitch  &lt 4 ENTER       &lt 4 BACKSPACE
             >;
         };
@@ -385,6 +391,17 @@
 &trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3    &trans        &trans        &trans        &trans        &trans        &trans
                          &trans  &trans  &trans    &trans        &trans        &trans
             >;
+        };
+
+        Mouse {
+            bindings = <
+        &trans  &trans     &trans     &trans     &trans    &trans        &trans          &kp PAGE_UP     &kp PAGE_DOWN  &trans
+        &trans  &mkp MCLK  &mkp LCLK  &mkp RCLK  &trans    &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT
+&trans  &trans  &trans     &trans     &trans     &trans    &trans        &trans          &trans          &trans         &trans           &trans
+                           &trans     &to 0      &to 0     &msc SCRL_UP  &msc SCRL_DOWN  &trans
+            >;
+
+            label = "L_MOUSE";
         };
     };
 };
