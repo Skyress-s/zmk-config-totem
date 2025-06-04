@@ -23,10 +23,13 @@
 #define TVP2 5
 
 &mt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <175>;
     global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    require-prior-idle-ms = <150>;
+    hold-trigger-on-release;
+    hold-trigger-key-positions = <32 33 34 35 36 37 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37>;
 };
 
 / {
@@ -38,6 +41,164 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        BraceOpen {
+            bindings = <&kp NB_LEFT_BRACE>;
+            key-positions = <1 2>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        BraceClose {
+            bindings = <&kp NB_RIGHT_BRACE>;
+            key-positions = <2 3>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        BracketOpen {
+            bindings = <&kp NB_LEFT_BRACKET>;
+            key-positions = <1 2>;
+            layers = <2>;
+            require-prior-idle-ms = <150>;
+        };
+
+        BracketClose {
+            bindings = <&kp NB_RIGHT_BRACKET>;
+            key-positions = <3 2>;
+            layers = <2>;
+            require-prior-idle-ms = <150>;
+        };
+
+        ParentOpen {
+            bindings = <&kp NB_LEFT_PARENTHESIS>;
+            key-positions = <11 12>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        ParentClose {
+            bindings = <&kp NB_RIGHT_PARENTHESIS>;
+            key-positions = <12 13>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        CrocOpen {
+            bindings = <&kp NB_LESS_THAN>;
+            key-positions = <12 11>;
+            layers = <2>;
+            require-prior-idle-ms = <150>;
+        };
+
+        CrocClose {
+            bindings = <&kp NB_GREATER_THAN>;
+            key-positions = <13 12>;
+            layers = <2>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Underscore {
+            bindings = <&kp NB_UNDERSCORE>;
+            key-positions = <27 28>;
+            layers = <2>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Hat {
+            bindings = <&kp NB_CARET>;
+            key-positions = <16 17>;
+            layers = <2>;
+            require-prior-idle-ms = <150>;
+        };
+
+        plus {
+            bindings = <&kp NB_PLUS>;
+            key-positions = <3 13>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        minus {
+            bindings = <&kp NB_MINUS>;
+            key-positions = <13 24>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Star {
+            bindings = <&kp NB_STAR>;
+            key-positions = <23 22>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Equal {
+            bindings = <&kp NB_EQUAL>;
+            key-positions = <24 23>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Tab {
+            bindings = <&kp NB_PIPE>;
+            key-positions = <16 17>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Ampersand {
+            bindings = <&kp NB_AMPERSAND>;
+            key-positions = <17 18>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Dollar {
+            bindings = <&kp NB_DOLLAR>;
+            key-positions = <6 7>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Percent {
+            bindings = <&kp NB_PERCENT>;
+            key-positions = <7 8>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Gaming {
+            bindings = <&gaming 5 0>;
+            key-positions = <21 22>;
+            layers = <0 5>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Exclemation {
+            bindings = <&kp NB_EXCLAMATION>;
+            key-positions = <27 28>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        Question {
+            bindings = <&kp NB_QUESTION>;
+            key-positions = <28 29>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
+        };
+
+        FwdSlash {
+            bindings = <&kp NB_SLASH>;
+            key-positions = <15 5>;
+        };
+
+        BwdSlash {
+            bindings = <&kp NB_BACKSLASH>;
+            key-positions = <26 15>;
         };
     };
 
@@ -55,6 +216,36 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
+        };
+    };
+
+    behaviors {
+        gaming: gaming {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GAMING";
+            #binding-cells = <2>;
+            bindings = <&to>, <&to>;
+
+            tapping-term-ms = <175>;
+            flavor = "balanced";
+        };
+
+        mmQuestionExplemation: mmQuestionExplemation {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMQUESTIONEXPLEMATION";
+            bindings = <&kp NB_QUESTION>, <&kp NB_EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mmquote: mmquote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMQUOTE";
+            bindings = <&kp NB_SQT>, <&kp NB_DOUBLE_QUOTES>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -80,9 +271,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q       &kp W       &kp F           &kp P        &kp B        &kp J            &kp L             &kp U               &kp Y           &tog 5
+                &kp Q       &kp W       &kp F           &kp P        &kp B        &kp J            &kp L             &kp U               &kp Y           &mmquote
                 &mt LGUI A  &mt LALT R  &mt LCTRL S     &mt LSHFT T  &kp G        &kp M            &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt RGUI O
-&kp LEFT_SHIFT  &kp Z       &kp X       &kp C           &kp D        &kp V        &kp K            &kp H             &kp NB_COMMA        &kp NB_DOT      &kp NB_SLASH  &kp NB_BACKSLASH
+&kp LEFT_SHIFT  &kp Z       &kp X       &kp C           &kp D        &kp V        &kp K            &kp H             &kp NB_COMMA        &kp NB_DOT      &mmQuestionExplemation  &kp NB_BACKSLASH
                                         &lt 6 LEFT_ALT  &lt 1 SPACE  &lt 2 TAB    &lt 3 BACKSPACE  &lt 4 ENTER       &lt 4 BACKSPACE
             >;
         };
@@ -142,10 +333,10 @@
 
         Gaming {
             bindings = <
-        &kp M      &kp Q  &kp X    &kp E         &kp R           &trans  &trans  &trans  &trans  &trans
-        &kp LSHFT  &kp A  &kp W    &kp D         &kp F           &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp S    &kp C         &kp V           &trans  &trans  &trans  &trans  &trans  &trans
-                          &kp TAB  &kp NB_SPACE  &kp LEFT_ALT    &trans  &trans  &trans
+         &kp M      &kp Q  &kp W       &kp E         &kp R           &trans  &trans  &trans  &trans  &trans
+         &kp LSHFT  &kp A  &kp S       &kp D         &kp F           &trans  &trans  &trans  &trans  &trans
+&kp TAB  &kp LCTRL  &kp Z  &kp NB_X    &kp C         &kp V           &trans  &trans  &trans  &trans  &trans  &trans
+                           &kp ESCAPE  &kp LEFT_ALT  &kp NB_SPACE    &trans  &trans  &trans
             >;
         };
 
