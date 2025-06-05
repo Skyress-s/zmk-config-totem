@@ -62,14 +62,14 @@
         BracketOpen {
             bindings = <&kp NB_LEFT_BRACKET>;
             key-positions = <27 28>;
-            layers = <2>;
+            layers = <1>;
             require-prior-idle-ms = <150>;
         };
 
         BracketClose {
             bindings = <&kp NB_RIGHT_BRACKET>;
             key-positions = <28 29>;
-            layers = <2>;
+            layers = <1>;
             require-prior-idle-ms = <150>;
         };
 
@@ -90,14 +90,14 @@
         CrocOpen {
             bindings = <&kp NB_LESS_THAN>;
             key-positions = <17 16>;
-            layers = <2>;
+            layers = <1>;
             require-prior-idle-ms = <150>;
         };
 
         CrocClose {
             bindings = <&kp NB_GREATER_THAN>;
             key-positions = <17 18>;
-            layers = <2>;
+            layers = <1>;
             require-prior-idle-ms = <150>;
         };
 
@@ -234,7 +234,7 @@
         };
 
         MouseLayer {
-            bindings = <&tog 7>;
+            bindings = <&tog 6>;
             key-positions = <3 2>;
             layers = <0>;
         };
@@ -330,19 +330,8 @@
                 &kp Q               &kp W           &kp F           &kp P             &kp B        &kp J                 &kp L             &kp U               &kp Y           &mmquote
                 &mt LGUI A          &mt LALT R      &mt LCTRL S     &mt LSHFT T       &kp G        &kp M                 &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt RGUI O
 &kp LEFT_SHIFT  &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &kp C           &kp D             &kp V        &kp K                 &kp H             &kp NB_COMMA        &kp NB_DOT      &mmQuestionExplemation  &backspace_layerswitch
-                                                    &lt 6 LEFT_ALT  &testbeh 6 SPACE  &lt 2 TAB    &testbeh 3 BACKSPACE  &lt 4 ENTER       &lt 4 BACKSPACE
+                                                    &lt 2 LEFT_ALT  &testbeh 2 SPACE  &lt 1 TAB    &testbeh 3 BACKSPACE  &lt 4 ENTER       &lt 4 BACKSPACE
             >;
-        };
-
-        Misc {
-            bindings = <
-        &trans  &trans     &trans      &trans      &trans    &kp F7  &kp F8  &kp F9  &kp F10  &trans
-        &trans  &kp ENTER  &trans      &kp ESCAPE  &trans    &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &trans  &trans     &kp DELETE  &kp HOME    &trans    &kp F1  &kp F2  &kp F3  &kp F12  &trans  &trans
-                           &trans      &trans      &trans    &trans  &trans  &trans
-            >;
-
-            label = "L_FKEY";
         };
 
         Num {
@@ -369,6 +358,15 @@
             >;
         };
 
+        FKEYS {
+            bindings = <
+        &trans     &kp F12  &kp F7  &kp F8  &kp F9    &bt BT_CLR    &trans        &trans        &trans        &trans
+        &kp ENTER  &kp F11  &kp F4  &kp F5  &kp F6    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans     &kp F10  &kp F1  &kp F2  &kp F3    &trans        &trans        &trans        &trans        &trans        &trans
+                            &trans  &trans  &trans    &trans        &trans        &trans
+            >;
+        };
+
         Symbols {
             bindings = <
            &kp NB_TILDE  &kp NB_DOLLAR      &kp NB_LEFT_BRACE        &kp NB_RIGHT_BRACE        &kp NB_AT               &kp NB_PLUS        &kp NB_ASTERISK  &kp NB_PIPE       &kp NB_QUESTION      &trans
@@ -382,7 +380,7 @@
             bindings = <
         &trans  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &none     &trans          &trans          &trans          &trans        &trans
         &trans  &trans      &kp C_STOP         &kp C_PLAY_PAUSE  &none     &kp C_MENU_ESC  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
-&trans  &trans  &trans      &kp C_PREV         &kp C_NEXT        &trans    &trans          &kp INSERT      &trans          &trans        &trans     &trans
+&trans  &trans  &trans      &kp C_PREV         &kp C_NEXT        &trans    &trans          &kp INSERT      &kp HOME        &trans        &trans     &trans
                             &trans             &trans            &trans    &trans          &trans          &trans
             >;
         };
@@ -393,15 +391,6 @@
          &kp LSHFT  &kp A  &kp S       &kp D         &kp F           &trans  &trans  &trans  &trans  &trans
 &kp TAB  &kp LCTRL  &kp Z  &kp NB_X    &kp C         &kp V           &trans  &trans  &trans  &trans  &trans  &trans
                            &kp ESCAPE  &kp LEFT_ALT  &kp NB_SPACE    &trans  &trans  &trans
-            >;
-        };
-
-        FKEYS {
-            bindings = <
-        &trans     &kp F12  &kp F7  &kp F8  &kp F9    &bt BT_CLR    &trans        &trans        &trans        &trans
-        &kp ENTER  &kp F11  &kp F4  &kp F5  &kp F6    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans     &kp F10  &kp F1  &kp F2  &kp F3    &trans        &trans        &trans        &trans        &trans        &trans
-                            &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
 
