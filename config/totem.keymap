@@ -198,7 +198,7 @@
         };
 
         FwdSlash {
-            bindings = <&kp NB_SLASH>;
+            bindings = <&kp KP_SLASH>;
             key-positions = <17 28>;
             require-prior-idle-ms = <150>;
             timeout-ms = <20>;
