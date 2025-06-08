@@ -271,10 +271,26 @@
 
         MouseLayer {
             bindings = <&tog 6>;
-            key-positions = <3 2>;
+            key-positions = <8 6>;
             layers = <0>;
             require-prior-idle-ms = <150>;
             timeout-ms = <20>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <2 3>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        Home {
+            bindings = <&kp HOME>;
+            key-positions = <3 1>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
         };
     };
 
