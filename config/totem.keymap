@@ -285,12 +285,20 @@
             layers = <0>;
         };
 
-        Home {
-            bindings = <&kp HOME>;
+        Delete {
+            bindings = <&kp DELETE>;
             key-positions = <3 1>;
             timeout-ms = <20>;
             require-prior-idle-ms = <150>;
             layers = <0>;
+        };
+
+        Home {
+            bindings = <&kp HOME>;
+            key-positions = <24 22>;
+            layers = <0>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <150>;
         };
     };
 
