@@ -198,7 +198,7 @@
         };
 
         FwdSlash {
-            bindings = <&kp KP_SLASH>;
+            bindings = <&kp NB_FSLH>;
             key-positions = <17 28>;
             require-prior-idle-ms = <150>;
             timeout-ms = <20>;
@@ -255,7 +255,7 @@
 
         Backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <7 6>;
+            key-positions = <13 11>;
             layers = <0>;
             require-prior-idle-ms = <150>;
             timeout-ms = <20>;
