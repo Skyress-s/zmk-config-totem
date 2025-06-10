@@ -285,7 +285,7 @@
             layers = <0>;
         };
 
-        Delete {
+        Delete2 {
             bindings = <&kp DELETE>;
             key-positions = <3 1>;
             timeout-ms = <20>;
