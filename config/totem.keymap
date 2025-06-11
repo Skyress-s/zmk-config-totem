@@ -373,14 +373,10 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            flavor = "balanced";
-        };
-
-        backspace_shift: backspace_shift {
-            compatible = "zmk,behavior-tap-dance";
-            label = "BACKSPACE_SHIFT";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT BACKSPACE>, <&kp BACKSPACE>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 22 23 24 25 26 27 28 29 30>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
     };
 
@@ -406,10 +402,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q               &kp W           &kp F           &kp P             &kp B        &kp J             &kp L             &kp U               &kp Y           &mmquote
-                &mt LGUI A          &mt LALT R      &mt LCTRL S     &mt LSHFT T       &kp G        &kp M             &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt RGUI O
-&kp LEFT_SHIFT  &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &kp C           &kp D             &kp V        &kp K             &kp H             &kp NB_COMMA        &kp NB_DOT      &mmQuestionExplemation  &backspace_layerswitch
-                                                    &lt 2 LEFT_ALT  &testbeh 2 SPACE  &lt 1 TAB    &backspace_shift  &lt 4 ENTER       &lt 4 BACKSPACE
+                &kp Q               &kp W           &kp F           &kp P             &kp B        &kp J                      &kp L             &kp U               &kp Y           &mmquote
+                &mt LGUI A          &mt LALT R      &mt LCTRL S     &mt LSHFT T       &kp G        &kp M                      &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt RGUI O
+&kp LEFT_SHIFT  &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &kp C           &kp D             &kp V        &kp K                      &kp H             &kp NB_COMMA        &kp NB_DOT      &mmQuestionExplemation  &backspace_layerswitch
+                                                    &lt 2 LEFT_ALT  &testbeh 2 SPACE  &lt 1 TAB    &bmt LEFT_SHIFT BACKSPACE  &lt 4 ENTER       &lt 4 BACKSPACE
             >;
         };
 
