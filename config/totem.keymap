@@ -372,9 +372,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-unless-interrupted";
-            hold-while-undecided;
+            tapping-term-ms = <250>;
+            flavor = "balanced";
         };
     };
 
