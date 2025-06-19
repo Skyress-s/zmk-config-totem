@@ -426,7 +426,7 @@
             bindings = <
         &trans      &trans     &kp NB_N7  &kp NB_N8  &kp NB_N9    &trans  &trans         &trans          &trans     &trans
         &kp PERIOD  &kp COMMA  &kp NB_N4  &kp NB_N5  &kp NB_N6    &trans  &kp NB_A_RING  &kp NB_O_SLASH  &kp NB_AE  &trans
-&trans  &trans      &kp NB_N0  &kp NB_N1  &kp NB_N2  &kp NB_N3    &trans  &trans         &trans          &trans     &trans  &trans
+&trans  &trans      &kp NB_N0  &kp NB_N1  &kp NB_N2  &kp NB_N3    &trans  &kp PAGE_DOWN  &kp PAGE_UP     &trans     &trans  &trans
                                &trans     &trans     &trans       &trans  &trans         &trans
             >;
         };
